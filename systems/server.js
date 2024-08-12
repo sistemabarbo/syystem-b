@@ -52,7 +52,7 @@ app.get('/', async (req, res) => {
 
     try {
         const transacoes = await buscarTransacoes(nomeDoItem, parseInt(page), parseInt(limit));
-        res.render('index', {
+        res.render('app', {
             transacoes: transacoes,
             nome_do_item: nomeDoItem,
         });
